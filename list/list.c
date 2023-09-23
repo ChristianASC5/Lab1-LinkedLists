@@ -271,6 +271,11 @@ elem list_get_elem_at(list_t *l, int index)
 
 int list_get_index_of(list_t *l, elem value)
 {
+    if (l->head == NULL)
+    {
+        return -1;
+    }
+    
     node_t *node = l->head;
 
     int index = 1;
